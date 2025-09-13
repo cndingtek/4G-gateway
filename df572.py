@@ -21,7 +21,7 @@ class DF572(object):
             if (data_len == len(req_data) / 2):
                 if (data_type == "01" or data_type == "02"):
                     if (data_len == 33):
-                        token_id = req_data[48:63]
+                        token_id = req_data[49:64]
                         data_levelHeight = int(req_data[10:14], 16)
                         data_airHeight = int(req_data[14:18], 16)
                         data_gpsEnabled = int(req_data[18:20], 16)
@@ -51,7 +51,7 @@ class DF572(object):
                         }
                     else:
                         if (data_len == 41):
-                            token_id = req_data[64:79]
+                            token_id = req_data[65:80]
                             data_levelHeight = int(req_data[10:14], 16)
                             data_airHeight = int(req_data[14:18], 16)
                             data_gpsEnabled = int(req_data[18:20], 16)
